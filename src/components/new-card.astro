@@ -1,0 +1,87 @@
+---
+interface Props {
+    title? : string,
+    content? : string
+}
+
+const {title, content} = Astro.props
+---
+<style>
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  /* Definir la animación */
+  @keyframes border-spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* Aplicar la animación */
+  .animate-border-spin {
+    animation: border-spin 5s linear infinite;
+  }
+
+  /* Act as a border */
+  .card-wrapper {
+    @apply relative overflow-hidden rounded-2xl bg-gradient-to-b from-slate-700 to-slate-800;
+  }
+
+  /* Gradient */
+  .card-wrapper::before {
+    background: conic-gradient(
+      rgba(244, 114, 182, 0.4) 0deg,
+      rgba(192, 132, 252, 0.4) 0deg,
+      transparent 20deg
+    );
+
+    @apply absolute left-[-125%] top-[-125%] h-[350%] w-[350%] animate-border-spin content-[''];
+  }
+
+  /* Body */
+  .card-content {
+    @apply absolute left-[1.5px] top-[1.5px] h-[calc(100%-2px)] w-[calc(100%-2px)] rounded-2xl bg-gradient-to-b from-slate-800 to-slate-900;
+  }
+}
+</style>
+
+<div class="card-wrapper min-h-[170px] w-full">
+    <div class="card-content flex justify-center text-xs">
+        <div class="w-full p-5">
+            <div class="flex items-center space-x-2">
+                <img src="https://static-cdn.jtvnw.net/emoticons/v2/emotesv2_0da7b47285284f30b8b62daaa20d0c11/default/light/1.0" alt="" class="h-6 w-6">
+                <h1 class="font-bold text-2xl">About me</h1>     
+            </div>
+            <p class="text-sm mt-2">I'm a self-taught fullstack programmer with a weakness for C# and Java. I love cats :D . I also like to listen to corridos and salsa while I work. I dive into the playful world of hacking through hardware and cybersecurity while playing with open source projects. ⛄</p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!-- <div class="mb-8 flex">
+    <div class="inline-flex">
+        <span class="relative inline-block overflow-hidden rounded-lg p-[1px]">
+            <span class="absolute inset-[-2000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#a9a9a9_0%,#0c0c0c_50%,#a9a9a9_100%)] dark:bg-[conic-gradient(from_90deg_at_50%_50%,#171717_0%,#737373_50%,#171717_100%)]">
+            </span>
+            <div class="inline-flex h-full w-full justify-center rounded-lg bg-white px-10 py-2 stext-sm leading-5 text-slate-600 backdrop-blur-xl dark:bg-black dark:text-slate-200">
+                <h1>Hola</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, velit ad delectus excepturi praesentium autem molestiae repellendus illum unde alias saepe expedita placeat, dicta voluptatem. Exercitationem natus impedit ipsa recusandae!</p>
+            </div>
+        </span>
+    </div>
+</div> -->
+
+<!-- <div class="">
+    <h1>TITULO</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo alias obcaecati cum eveniet sed quisquam similique aspernatur? Accusamus commodi debitis adipisci quod sunt aliquid et. Esse necessitatibus alias ipsum repudiandae.</p>
+</div> -->
+
+
