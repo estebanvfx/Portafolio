@@ -1,0 +1,62 @@
+---
+interface Props{
+    title? : string,
+    content?: string
+}
+
+
+import jsonSkills from "../config/skills.json"
+
+//console.log(jsonSkills)
+---
+
+
+
+
+<style>
+    .glow {
+    animation: move 5s linear infinite;
+    offset-path: rect(0% auto 100% auto);
+    background: radial-gradient(#fff, #f1f5f9, transparent);
+    }
+
+    @keyframes move {
+        0% {
+            offset-distance: 0%;
+        }
+
+        100% {
+            offset-distance: 100%;
+        }
+    }
+
+</style>
+
+{
+    jsonSkills.map(category => (
+        <div class="overflow-hidden p-px relative rounded-2xl bg-neutral-600/20 mb-10">
+            <div class="glow inset-0 w-[100px] h-[100px] absolute rotate-45"></div>
+            <div class="p-5 inline-block space-y-2 w-full bg-gradient-to-b from-slate-800 to-slate-900 rounded-2xl z-10 relative px-5 py-2">
+                <div class="flex items-center space-x-2 mb-5">
+                    {/* <img src={category.icon} alt="" class="h-6 w-6 rounded-sm"> */}
+                    <h1 class="font-bold text-3xl text-white">{category.title}</h1>
+                </div>
+                <div class="flex flex-wrap max-w-3xl gap-3">
+                    {
+                        category.skills.map(skill => (
+                            <div class="flex space-x-1 items-center gap-1 text-white px-2 py-1 rounded-lg bg-slate-800">
+                                <div class="h-5 w-5">
+                                    <img src={skill.svg} alt={skill.name} />
+                                </div>
+                                <p class="text-base">{skill.name}</p>
+                            </div>
+                        ))
+                    }
+                </div>
+            </div>
+        </div>
+    ))
+}
+
+    
+

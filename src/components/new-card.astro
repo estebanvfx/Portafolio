@@ -7,59 +7,35 @@ interface Props {
 const {title, content} = Astro.props
 ---
 <style>
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@layer utilities {
-  /* Definir la animación */
-  @keyframes border-spin {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
+  .glow {
+  animation: move 5s linear infinite;
+  offset-path: rect(0% auto 100% auto);
+  background: radial-gradient(#fff, #f1f5f9, transparent);
   }
 
-  /* Aplicar la animación */
-  .animate-border-spin {
-    animation: border-spin 5s linear infinite;
+  @keyframes move {
+      0% {
+          offset-distance: 0%;
+      }
+
+      100% {
+          offset-distance: 100%;
+      }
   }
 
-  /* Act as a border */
-  .card-wrapper {
-    @apply relative overflow-hidden rounded-2xl bg-gradient-to-b from-slate-700 to-slate-800;
-  }
-
-  /* Gradient */
-  .card-wrapper::before {
-    background: conic-gradient(
-      rgba(244, 114, 182, 0.4) 0deg,
-      rgba(192, 132, 252, 0.4) 0deg,
-      transparent 20deg
-    );
-
-    @apply absolute left-[-125%] top-[-125%] h-[350%] w-[350%] animate-border-spin content-[''];
-  }
-
-  /* Body */
-  .card-content {
-    @apply absolute left-[1.5px] top-[1.5px] h-[calc(100%-2px)] w-[calc(100%-2px)] rounded-2xl bg-gradient-to-b from-slate-800 to-slate-900;
-  }
-}
 </style>
 
-<div class="card-wrapper min-h-[170px] w-full">
-    <div class="card-content flex justify-center text-xs">
-        <div class="w-full p-5">
-            <div class="flex items-center space-x-2">
-                <img src="https://static-cdn.jtvnw.net/emoticons/v2/emotesv2_0da7b47285284f30b8b62daaa20d0c11/default/light/1.0" alt="" class="h-6 w-6">
-                <h1 class="font-bold text-2xl">About me</h1>     
-            </div>
-            <p class="text-sm mt-2">I'm a self-taught fullstack programmer with a weakness for C# and Java. I love cats :D . I also like to listen to corridos and salsa while I work. I dive into the playful world of hacking through hardware and cybersecurity while playing with open source projects. ⛄</p>
+<div class="overflow-hidden p-px relative rounded-2xl bg-neutral-600/20">
+  <div class="glow inset-0 w-[100px] h-[100px] absolute rotate-45"></div>
+  <div class=" p-5 inline-block space-y-2 w-full bg-gradient-to-b from-slate-800 to-slate-900 rounded-2xl z-10 relative px-5 py-2">
+      <div class="w-full p-5">
+        <div class="flex items-center space-x-2">
+            <img src="https://static-cdn.jtvnw.net/emoticons/v2/emotesv2_0da7b47285284f30b8b62daaa20d0c11/default/light/1.0" alt="" class="h-6 w-6">
+            <h1 class="font-bold text-3xl">About me</h1>     
         </div>
+        <p class="sm:text-lg mt-2 text-sm">I'm a self-taught fullstack programmer with a weakness for C# and Java. I love cats :D . I also like to listen to corridos and salsa while I work. I dive into the playful world of hacking through hardware and cybersecurity while playing with open source projects. ⛄</p>
     </div>
+  </div>
 </div>
 
 

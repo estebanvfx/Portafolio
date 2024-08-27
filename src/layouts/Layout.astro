@@ -18,7 +18,35 @@ const { title = "Astro test" } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<div class="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
+		<!-- <div class="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div> -->
 		<slot />
 	</body>
 </html>
+
+<style>
+	body {
+	min-height: 100vh;
+	display: grid;
+	place-items: center;
+	font-family: "Geist Mono", monospace;
+	background: hsl(0 0% 2%);
+	color-scheme: dark only;
+	}
+
+	body::before {
+		--line: hsl(0 0% 95% / 0.15);
+		--size: 60px;
+		content: "";
+		height: 100vh;
+		width: 100vw;
+		position: fixed;
+		background:
+			linear-gradient(90deg, var(--line) 1px, transparent 1px var(--size)) 50% 50% / var(--size) var(--size),
+			linear-gradient(var(--line) 1px, transparent 1px var(--size)) 50% 50% / var(--size) var(--size);
+		mask: linear-gradient(-15deg, transparent 30%, white);
+		top: 0;
+		transform-style: flat;
+		pointer-events: none;
+		z-index: -1;
+	}
+</style>
