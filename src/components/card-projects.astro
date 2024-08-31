@@ -6,7 +6,7 @@ import jsonProjects from "../config/projects.json"
 {
     jsonProjects.map((project) => (
         <a class="w-full" target="_blank" href={project.gitLink}>
-            <div class="text-default  bg-white border-t border-gray-800 rounded-t-xl shadow dark:bg-gray-800/20 dark:border-gray-700 my-5">
+            <div class="text-default   border-t  rounded-t-xl shadow bg-gray-800/20 border-gray-700 my-5">
                 <div class="relative h-[190px] rounded-t-lg flex justify-center items-center overflow-hidden">
                     {/* Fondo difuminado */}
                     <div class="absolute inset-0 w-full h-[200px] bg-cover bg-center" style={`background-image: url(${project.bgImg});`}></div>
