@@ -1,0 +1,67 @@
+[
+    {
+        "projectName" : "StreamForce",
+        "bgImg" : "https://i.imgur.com/NNznPkK_d.webp?maxwidth=760&fidelity=grand",
+        "gitLink" : "https://streamforge.codetesthub.com/public/",
+        "content" : "StreamForge is an automation tool.",
+        "skills" : [
+            {
+                "name": "Bash",
+                "svg": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Bash_Logo_Colored.svg/1200px-Bash_Logo_Colored.svg.png"
+            },
+            {
+                "name": "C#",
+                "svg": "https://icon.icepanel.io/Technology/svg/C%23-%28CSharp%29.svg"
+            },
+            {
+                "name": "Laravel",
+                "svg": "https://icon.icepanel.io/Technology/svg/Laravel.svg"
+            }
+        ]
+    },
+    {
+        "projectName" : "FitnessSCR",
+        "bgImg" : "https://i.imgur.com/tXv0dOW.png",
+        "gitLink" : "/",
+        "content" : "User control system",
+        "skills" : [
+            {
+                "name": "Java",
+                "svg": "https://cdn-icons-png.flaticon.com/512/5968/5968282.png "
+            },
+            {
+                "name": "MySQL",
+                "svg": "https://www.svgrepo.com/show/303251/mysql-logo.svg"
+            }
+        ]
+    },
+    {
+        "projectName" : "Parking Project",
+        "bgImg" : "https://i.imgur.com/xtItvFe.png",
+        "gitLink" : "/",
+        "content" : "Vehicle entry control",
+        "skills" : [
+            {
+                "name": "Android",
+                "svg": "https://icon.icepanel.io/Technology/png-shadow-512/Android-Studio.png"
+            }
+        ]
+    }
+    ,
+    {
+        "projectName" : "RestauranteECJ",
+        "bgImg" : "https://i.imgur.com/8UzCHNM_d.webp?maxwidth=760&fidelity=grand",
+        "gitLink" : "/",
+        "content" : "Software to manage orders and invoices.",
+        "skills" : [
+            {
+                "name": "Laravel",
+                "svg": "https://icon.icepanel.io/Technology/svg/Laravel.svg"
+            },
+            {
+                "name": "MySQL",
+                "svg": "https://www.svgrepo.com/show/303251/mysql-logo.svg"
+            }
+        ]
+    }
+]
