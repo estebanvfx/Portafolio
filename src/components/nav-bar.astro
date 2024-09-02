@@ -1,5 +1,5 @@
 ---
-
+const currentPath = Astro.url.pathname;
 ---
 
 <header class="fixed top-0 left-0 w-full flex py-8  z-50">
@@ -8,12 +8,12 @@
             <a class="hidden sm:inline-flex" href="/"><img src="https://giffiles.alphacoders.com/297/2970.gif" alt="cat-logo" class="w-20 rounded-lg"></a>
             <ul class="inline-flex gap-2">
                 <li class="font-semibold text-xl">
-                  <a href="/" class={`font-semibold text-xl ${Astro.url.pathname === '/' ? 'text-violet-500' : 'text-white'}`}>
+                  <a href="/" class={`font-semibold text-xl ${currentPath === '/' ? 'text-violet-500' : 'text-white'}`}>
                     /Home/
                   </a>
                 </li>
                 <li class="font-semibold text-xl">
-                  <a href="/projects" class={`font-semibold text-xl ${Astro.url.pathname === '/projects' ? 'text-violet-500' : 'text-white'}`}>
+                  <a href="/projects" class={`font-semibold text-xl ${currentPath === '/projects' ? 'text-violet-500' : 'text-white'}`}>
                     /Projects/
                   </a>
                 </li>
