@@ -1,24 +1,22 @@
 ---
-const currentPath = Astro.url.pathname;
 ---
 
-<header class="fixed top-0 left-0 w-full flex py-8  z-50">
-    <nav class="flex gap-6 sm:mx-20 h-20 mx-0 px-10 py-3 sm:rounded-xl backdrop-blur-sm bg-gray-800/30 items-center  w-full justify-between">
+<header class="fixed top-0 left-0 w-full flex py-8 z-50">
+    <nav class="flex gap-6 sm:mx-20 h-20 mx-0 px-10 py-3 sm:rounded-xl backdrop-blur-sm bg-gray-800/30 items-center w-full justify-between">
         <div class="text-white inline-flex items-center gap-8">
             <a class="hidden sm:inline-flex" href="/"><img src="https://giffiles.alphacoders.com/297/2970.gif" alt="cat-logo" class="w-20 rounded-lg"></a>
             <ul class="inline-flex gap-2">
                 <li class="font-semibold text-xl">
-                  <a href="/" class={`font-semibold text-xl ${currentPath === '/' ? 'text-violet-500' : 'text-white'}`}>
+                  <a href="/" class="nav-link font-semibold text-xl text-white" data-path="/">
                     /Home/
                   </a>
                 </li>
                 <li class="font-semibold text-xl">
-                  <a href="/projects" class={`font-semibold text-xl ${currentPath === '/projects' ? 'text-violet-500' : 'text-white'}`}>
+                  <a href="/projects" class="nav-link font-semibold text-xl text-white" data-path="/projects">
                     /Projects/
                   </a>
                 </li>
-              </ul>
-              
+            </ul>
         </div>
         <div>
             <a href="https://www.linkedin.com/in/jaider-espinosa-061089246/" target="_blank" rel="noopener noreferrer" class="inline-flex">
@@ -33,4 +31,25 @@ const currentPath = Astro.url.pathname;
         </div>
     </nav>
 </header>
+
+<script>
+  function updateActiveLink() {
+    const currentPath = window.location.pathname;
+    document.querySelectorAll('.nav-link').forEach(link => {
+      if (link.getAttribute('data-path') === currentPath) {
+        link.classList.add('text-violet-500');
+        link.classList.remove('text-white');
+      } else {
+        link.classList.remove('text-violet-500');
+        link.classList.add('text-white');
+      }
+    });
+  }
+
+  // Ejecutar al cargar la página
+  updateActiveLink();
+
+  // Ejecutar cuando cambie la ruta (para ViewTransitions)
+  document.addEventListener('astro:page-load', updateActiveLink);
+</script>
 
