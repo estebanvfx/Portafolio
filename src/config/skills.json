@@ -68,11 +68,19 @@
             },
             {
                 "name": "JWT",
-                "svg": "https://seeklogo.com/images/J/jwt-logo-65D86B4640-seeklogo.com.png"
+                "svg": "https://img.icons8.com/?size=256&id=rHpveptSuwDz&format=png"
+            },
+            {
+                "name": "GraphQL",
+                "svg": "https://www.vectorlogo.zone/logos/graphql/graphql-icon.svg"
             },
             {
                 "name": "Laravel",
                 "svg": "https://icon.icepanel.io/Technology/svg/Laravel.svg"
+            },
+            {
+                "name": "NestJS",
+                "svg": "https://www.vectorlogo.zone/logos/nestjs/nestjs-icon.svg"
             },
             {
                 "name": "Socket.IO",
@@ -81,6 +89,10 @@
             {
                 "name": "React",
                 "svg": "https://icon.icepanel.io/Technology/svg/React.svg"
+            },
+            {
+                "name": "Express",
+                "svg": "https://img.icons8.com/?size=256&id=9Gfx4Dfxl0JK&format=png"
             },
             {
                 "name": "Vite",
@@ -117,8 +129,8 @@
                 "svg": "https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png"
             },
             {
-                "name": "OBS",
-                "svg": "https://upload.wikimedia.org/wikipedia/commons/1/14/Open_Broadcaster_Software_Logo.png"
+                "name": "Insomnia",
+                "svg": "https://www.svgrepo.com/show/353904/insomnia.svg"
             },
             {
                 "name": "Ubuntu",
@@ -173,11 +185,7 @@
             {
                 "name": "DigitalOcean",
                 "svg": "https://icon.icepanel.io/Technology/svg/Digital-Ocean.svg"
-            },
-            {
-                "name": "Vultr",
-                "svg": "https://seeklogo.com/images/V/vultr-logo-B513C27910-seeklogo.com.png"
-            } 
+            }
         ]
     },
     {

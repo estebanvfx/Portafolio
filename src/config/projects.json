@@ -22,7 +22,7 @@
     {
         "projectName" : "FitnessSCR",
         "bgImg" : "https://i.imgur.com/tXv0dOW.png",
-        "gitLink" : "/",
+        "gitLink" : "",
         "content" : "User control system",
         "skills" : [
             {
@@ -38,7 +38,7 @@
     {
         "projectName" : "Parking Project",
         "bgImg" : "https://i.imgur.com/xtItvFe.png",
-        "gitLink" : "/",
+        "gitLink" : "",
         "content" : "Vehicle entry control",
         "skills" : [
             {
@@ -51,7 +51,7 @@
     {
         "projectName" : "RestauranteECJ",
         "bgImg" : "https://i.imgur.com/8UzCHNM_d.webp?maxwidth=760&fidelity=grand",
-        "gitLink" : "/",
+        "gitLink" : "",
         "content" : "Software to manage orders and invoices.",
         "skills" : [
             {
@@ -61,6 +61,30 @@
             {
                 "name": "MySQL",
                 "svg": "https://www.svgrepo.com/show/303251/mysql-logo.svg"
+            }
+        ]
+    },
+    {
+        "projectName" : "SoundFy",
+        "bgImg" : "public/img/soundfy.png",
+        "gitLink" : "https://www.soundfy.vip/",
+        "content" : "Landing page for a music distribution company.",
+        "skills" : [
+            {
+                "name": "AstroJS",
+                "svg": "https://images.seeklogo.com/logo-png/47/2/astro-icon-logo-png_seeklogo-477952.png"
+            }
+        ]
+    },
+    {
+        "projectName" : "Coffté",
+        "bgImg" : "public/img/coffte.png",
+        "gitLink" : "https://refrescoscoffte.com/",
+        "content" : "Landing Page for a soft drinks company",
+        "skills" : [
+            {
+                "name": "AstroJS",
+                "svg": "https://images.seeklogo.com/logo-png/47/2/astro-icon-logo-png_seeklogo-477952.png"
             }
         ]
     }
