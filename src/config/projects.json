@@ -66,7 +66,7 @@
     },
     {
         "projectName" : "SoundFy",
-        "bgImg" : "public/img/soundfy.png",
+        "bgImg" : "https://i.imgur.com/WwhhFjU.png",
         "gitLink" : "https://www.soundfy.vip/",
         "content" : "Landing page for a music distribution company.",
         "skills" : [
@@ -78,7 +78,7 @@
     },
     {
         "projectName" : "Coffté",
-        "bgImg" : "public/img/coffte.png",
+        "bgImg" : "https://i.imgur.com/oHM0cIZ.png",
         "gitLink" : "https://refrescoscoffte.com/",
         "content" : "Landing Page for a soft drinks company",
         "skills" : [
