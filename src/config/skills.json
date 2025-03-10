@@ -1,6 +1,6 @@
 [
     {
-        "title": "☕ Languages",
+        "title": "☕ Lenguajes",
         "icon": "https://minecraft.wiki/images/Enchanting_Table.gif?904a7",
         "skills": [
             {
@@ -51,7 +51,7 @@
         ]
     },
     {
-        "title": "📚 Frameworks and Libraries",
+        "title": "📚 Frameworks and Librerias",
         "icon": "https://i.pinimg.com/736x/cb/72/c9/cb72c970c16c426ed319f20d5b74c976.jpg",
         "skills": [
             {
@@ -105,7 +105,7 @@
         ]
     },
     {
-        "title": "🛠️ Tools",
+        "title": "🛠️ Herramientas",
         "icon": "https://cdn.apexminecrafthosting.com/img/uploads/2021/10/11194625/Enchanted-Bow.gif",
         "skills": [
             {
@@ -147,7 +147,7 @@
         ]
     },
     {
-        "title": "☁️ Clouds and Providers",
+        "title": "☁️ Clouds y Proveedores",
         "icon": "https://steamuserimages-a.akamaihd.net/ugc/937204191158134501/156D2D8C9283CB4BBC88FAE68B53986843AE6C5A/?imw=512&amp;imh=379&amp;ima=fit&amp;impolicy=Letterbox&amp;imcolor=%23000000&amp;letterbox=true",
         "skills": [
             {
@@ -164,7 +164,7 @@
             },
             {
                 "name": "MariaDB",
-                "svg": "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/mariadb-icon.png"
+                "svg": "https://mariadb.com/wp-content/uploads/2019/11/mariadb-logo-vertical_blue.svg"
             },
             {
                 "name": "MySQL",

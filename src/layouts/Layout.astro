@@ -31,7 +31,7 @@ const { title = "Astro test" } = Astro.props;
 
 		<footer class="w-full shadow bg-[#101010] mt-10">
 			<div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between text-gray-200">
-				<span>© 2024 Copyright</span>
+				<p>© <span id="year"></span> Copyright</p>
 				<p>Made by EstebanVfx</p>
 			</div>
 		</footer>
@@ -39,6 +39,9 @@ const { title = "Astro test" } = Astro.props;
 </html>
 
 
+<script>
+	document.getElementById('year').textContent = new Date().getFullYear().toString();
+</script>
 
 <style>
 	body {
